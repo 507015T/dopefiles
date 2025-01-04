@@ -50,3 +50,4 @@ yabai -m rule --add app="^Archive Utility$" manage=off
 yabai -m rule --add app="^Утилита архивирования$" manage=off
 yabai -m rule --add app="^Photo Booth$" manage=off
 yabai -m rule --add app="^Books$" manage=off
+yabai -m rule --add app="^Numi$" manage=off

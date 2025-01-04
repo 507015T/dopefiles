@@ -6,12 +6,12 @@ end
 local one_monokai = {
 	fg = "#abb2bf",
 	bg = "none",
-	green = "#98c379",
-	yellow = "#e5c07b",
+	green = "#9ece6a",
+	yellow = "#9d7cd8",
 	purple = "#c678dd",
 	orange = "#d19a66",
 	peanut = "#f6d5a4",
-	red = "#e06c75",
+	red = "#ff757f",
 	aqua = "#61afef",
 	darkblue = "#282c34",
 	dark_red = "#f75f5f",
@@ -41,7 +41,7 @@ local c = {
 			return {
 				fg = require("feline.providers.vi_mode").get_mode_color(),
 				bg = "none",
-				style = "bold",
+				-- style = "bold",
 				name = "NeovimModeHLColor",
 			}
 		end,
@@ -53,7 +53,7 @@ local c = {
 		hl = {
 			fg = "purple",
 			bg = "none",
-			style = "bold",
+			-- style = "bold",
 		},
 		left_sep = " ",
 		right_sep = " ",
@@ -97,7 +97,7 @@ local c = {
 			},
 		},
 		hl = {
-			style = "bold",
+			-- style = "bold",
 		},
 		left_sep = " ",
 		right_sep = " ",
@@ -128,7 +128,7 @@ local c = {
 		hl = {
 			fg = "purple",
 			bg = "none",
-			style = "bold",
+			-- style = "bold",
 		},
 		left_sep = " ",
 		right_sep = " ",
@@ -144,7 +144,7 @@ local c = {
 		hl = {
 			fg = "red",
 			bg = "none",
-			style = "bold",
+			-- style = "bold",
 		},
 		left_sep = " ",
 		right_sep = " ",
@@ -164,7 +164,7 @@ local c = {
 		hl = {
 			fg = "green",
 			bg = "none",
-			style = "bold",
+			-- style = "bold",
 		},
 		left_sep = " ",
 		right_sep = " ",
@@ -174,7 +174,7 @@ local c = {
 		hl = {
 			fg = "aqua",
 			bg = "none",
-			style = "bold",
+			-- style = "bold",
 		},
 		left_sep = " ",
 		right_sep = " ",
@@ -183,7 +183,7 @@ local c = {
 		provider = "scroll_bar",
 		hl = {
 			fg = "black",
-			style = "bold",
+			-- style = "bold",
 		},
 	},
 }

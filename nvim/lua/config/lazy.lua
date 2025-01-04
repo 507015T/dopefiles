@@ -12,8 +12,7 @@ vim.g.maplocalleader = "\\"
 -- Setup lazy.nvim 
 require("lazy").setup({ 
      -- Плагин для дерева файлов
-    {
-      "nvim-tree/nvim-tree.lua",
+    { "nvim-tree/nvim-tree.lua",
       version = "*",
       lazy = false,
       dependencies = {
@@ -44,7 +43,7 @@ require("lazy").setup({
     { "lewis6991/gitsigns.nvim", },
     --------------------------
     -- Плагин менеджер окон
-    {'akinsho/bufferline.nvim', version = "*"},
+	{"akinsho/bufferline.nvim", event = "VeryLazy"},
     -- Менеджер пакетов
     { 	"williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim" },
@@ -98,7 +97,45 @@ require("lazy").setup({
         -- your configuration comes here
         -- or leave it empty to use the default settings
         -- refer to the configuration section below
-      }
+      },
+    },
+    {
+      'kristijanhusak/vim-dadbod-ui',
+      dependencies = {
+        { 'tpope/vim-dadbod', lazy = true },
+        { 'kristijanhusak/vim-dadbod-completion', ft = { 'sql', 'mysql', 'plsql' }, lazy = true }, -- Optional
+      },
+      cmd = {
+        'DBUI',
+        'DBUIToggle',
+        'DBUIAddConnection',
+        'DBUIFindBuffer',
+      },
+      init = function()
+        -- Your DBUI configuration
+        vim.g.db_ui_use_nerd_fonts = 1
+      end,
+    },
+    {
+      "craftzdog/solarized-osaka.nvim",
+      lazy = false,
+      priority = 1000,
+      opts = {},
+    },
+    {
+      "folke/noice.nvim",
+      event = "VeryLazy",
+      opts = {
+        -- add any options here
+      },
+      dependencies = {
+        -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+        "MunifTanjim/nui.nvim",
+        -- OPTIONAL:
+        --   `nvim-notify` is only needed, if you want to use the notification view.
+        --   If not available, we use `mini` as the fallback
+        "rcarriga/nvim-notify",
+        }
     },
     ----------------------
 })

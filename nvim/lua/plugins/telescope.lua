@@ -15,3 +15,10 @@ vim.keymap.set('n', 'gr', builtin.lsp_references,
                {noremap = true, silent = true})
 vim.keymap.set('n', 'gd', builtin.lsp_definitions,
                {noremap = true, silent = true})
+require('telescope').setup{ 
+  defaults = { 
+    file_ignore_patterns = { 
+      "node_modules" 
+    }
+  }
+}

@@ -7,4 +7,4 @@ lspconfig.cssls.setup{}
 lspconfig.emmet_language_server.setup{}
 lspconfig.clangd.setup{}
 lspconfig.ts_ls.setup{}
-
+lspconfig.dockerls.setup{}
