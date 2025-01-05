@@ -24,12 +24,8 @@ require("plugins.mason")
 require("plugins.feline")
 -- Заставка
 require'alpha'.setup(require'plugins.startify'.config)
--- Плагин для комментирования
--- require('plugins.comment')
 -- Плагин indent-blankline
 require("ibl").setup()
--- Плагин Obsidian
--- require("plugins.obsidian")
 -- Плагины для дебага
 require("plugins.dap")
 require("dap-python").setup("python3")
@@ -38,3 +34,4 @@ require("dapui").setup()
 require("autoclose").setup()
 -- Syntax Highlighting
 require("plugins.treesitter")
+require("plugins.noice")

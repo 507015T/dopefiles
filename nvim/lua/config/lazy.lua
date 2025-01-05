@@ -29,15 +29,39 @@ require("lazy").setup({
         end,}},
     --------------------------
     -- LSP 
-    { 'neovim/nvim-lspconfig', },
+    {
+      'neovim/nvim-lspconfig',
+      -- dependencies = { 'saghen/blink.cmp' },
+      --
+      -- -- example using `opts` for defining servers
+      -- opts = {
+      --   servers = {
+      --     lua_ls = {}
+      --   }
+      -- },
+      -- config = function()
+      --   local capabilities = require('blink.cmp').get_lsp_capabilities()
+      --   local lspconfig = require('lspconfig')
+      --
+      --   lspconfig['lua-ls'].setup({ capabilities = capabilities })
+      --   lspconfig['pyright'].setup({ capabilities = capabilities })
+      --   lspconfig['emmet-language-server'].setup({ capabilities = capabilities })
+      --   lspconfig['cssls'].setup({ capabilities = capabilities })
+      --   lspconfig['clangd'].setup({ capabilities = capabilities })
+      --   lspconfig['ts_ls'].setup({ capabilities = capabilities })
+      --   lspconfig['dockerls'].setup({ capabilities = capabilities })
+      -- end
+    },
     --------------------------
     -- Плагин для автокомплита
-    {'hrsh7th/cmp-nvim-lsp',
+    {
+    'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-path',
     'hrsh7th/cmp-cmdline',
     'hrsh7th/nvim-cmp',
-    'hrsh7th/vim-vsnip'},
+    'hrsh7th/vim-vsnip'
+    },
     --------------------------
     -- Плагин для отслеживания изменений git
     { "lewis6991/gitsigns.nvim", },
@@ -54,9 +78,6 @@ require("lazy").setup({
     -- Заставка
     { 'goolord/alpha-nvim' },
     --------------------------
-    -- Плагин для комментирования
-    -- { 'numToStr/Comment.nvim' },
-    --------------------------
     -- Themes
     ----------- catppuccin
      { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
@@ -69,14 +90,6 @@ require("lazy").setup({
         ---@type ibl.config
         opts = {},
     },
-    -------------------------
-    -- Плагин Obsidian
-    -- {
-    --   "epwalsh/obsidian.nvim",
-    --   version = "*",
-    --   lazy = true,
-    --   ft = "markdown",
-    -- },
     -------------------------
     -- Трекер проведеннего времепни в 
     { 'wakatime/vim-wakatime', lazy = false },
@@ -116,6 +129,7 @@ require("lazy").setup({
         vim.g.db_ui_use_nerd_fonts = 1
       end,
     },
+    -------------------------------
     {
       "craftzdog/solarized-osaka.nvim",
       lazy = false,
@@ -138,4 +152,22 @@ require("lazy").setup({
         }
     },
     ----------------------
+    -- {
+    --   'saghen/blink.cmp',
+    --   dependencies = 'rafamadriz/friendly-snippets',
+    --   version = '*',
+    --   ---@module 'blink.cmp'
+    --   ---@type blink.cmp.Config
+    --   opts = {
+    --    keymap = { preset = 'default' },
+    --     appearance = {
+    --       use_nvim_cmp_as_default = true,
+    --       nerd_font_variant = 'mono'
+    --     },
+    --     sources = {
+    --       default = { 'lsp', 'path', 'snippets', 'buffer' },
+    --     },
+    --   },
+    --   opts_extend = { "sources.default" }
+    -- }
 })
