@@ -52,3 +52,5 @@ vim.opt.fillchars = {
 vim.cmd([[highlight clear LineNr]])
 vim.cmd([[highlight clear SignColumn]])
 vim.opt.conceallevel=1
+vim.cmd[[colorscheme solarized-osaka]]
+vim.api.nvim_set_hl(0, "Visual", { reverse = true })
