@@ -5,7 +5,21 @@ return {
         'nvim-tree/nvim-web-devicons',
         'nvim-lua/plenary.nvim',
     },
+
     config = function()
+        local function read_ascii_art(file_path)
+            local lines = {}
+            local file = io.open(file_path, "r")
+            if file then
+                for line in file:lines() do
+                    table.insert(lines, line)
+                end
+                file:close()
+            else
+                print("Ошибка: не удалось открыть файл " .. file_path)
+            end
+            return lines
+        end
         local startify = require("alpha.themes.startify")
         startify.file_icons.provider = "devicons"
 
@@ -125,17 +139,7 @@ return {
 
         local header = {
             type = "text",
-            val = {
-                "                                                   ██     ",
-                "                                    ▄▄▄            ██     ",
-                "  █▄▄▄▄▄▄ ▄██▀▀██▄█▄▄▄▄▄▄█▀▄██▀▀██▄▀███   █▄▄▄▄▄▄██████   ",
-                " ▄█      ██▀    ▀██     █▀██▀    ▀██ ██  ▄█        ██     ",
-                " █████▄▄ ██      ██    █▀ ██      ██ ██  █████▄▄   ██     ",
-                "      ▀████▄    ▄██   █▀  ██▄    ▄██ ██       ▀██  ██     ",
-                " █     ██ ▀██████▀   █▀    ▀██████▀▄████▄█     ██  ▀████  ",
-                "███  ▄██           █▀                   ███  ▄██          ",
-                " █████            █▀                     █████            ",
-            },
+            val = read_ascii_art(vim.fn.expand("~/.config/nvim/lua/plugins/startify.txt")),
             opts = {
                 position = "center",
                 hl = "Type",
@@ -201,6 +205,7 @@ return {
         }
 
         require('alpha').setup(config)
+
     end,
 }
 

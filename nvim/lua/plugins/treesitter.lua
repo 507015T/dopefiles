@@ -1,15 +1,15 @@
 -- Подсветка синтаксиса( БЛЯ Я РЕАЛЬНО НЕ ЗАМЕЧАЛ, ЧТО ЗАБЫЛ ЕГО УСТАНОВИТЬ)
 --
 return {    "nvim-treesitter/nvim-treesitter",
-            "nvim-treesitter/nvim-treesitter-context",
+            dependencies = { "nvim-treesitter/nvim-treesitter-context" },
             build = ":TSUpdate",
             config = function()
             local configs = require("nvim-treesitter.configs")
             configs.setup({
-              ensure_installed = { "c", "lua", "vim", "vimdoc", "javascript", "html", 'css', 'python' },
+              ensure_installed = { "c", "lua", "vim", "vimdoc", "javascript", "html", 'css', 'python', 'cpp' },
               sync_install = false,
               highlight = { enable = true },
-              indent = { enable = true },  
+              indent = { enable = true },
             })
             require'treesitter-context'.setup{
               enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
@@ -29,5 +29,4 @@ return {    "nvim-treesitter/nvim-treesitter",
 
             vim.api.nvim_set_hl(0, "@text.todo", {})
             end,
-
 }
