@@ -23,6 +23,7 @@ return {
         local startify = require("alpha.themes.startify")
         startify.file_icons.provider = "devicons"
 
+
         local dashboard = require("alpha.themes.dashboard")
         local plenary_path = require("plenary.path")
         local cdir = vim.fn.getcwd()
@@ -133,7 +134,13 @@ return {
             return {
                 type = "group",
                 val = tbl,
-                opts = {},
+
+
+        opts = {
+            -- margin = 5,
+
+        }
+
             }
         end
 
@@ -188,20 +195,20 @@ return {
                 { type = "padding", val = 2 },
                 buttons,
             },
-            opts = {
-                margin = 5,
-                setup = function()
-                    vim.api.nvim_create_augroup("alpha_temp", { clear = true })
-                    vim.api.nvim_create_autocmd('DirChanged', {
-                        pattern = '*',
-                        group = "alpha_temp",
-                        callback = function()
-                            require('alpha').redraw()
-                            vim.cmd('AlphaRemap')
-                        end,
-                    })
-                end,
-            },
+            -- opts = {
+            --     margin = 5,
+            --     setup = function()
+            --         vim.api.nvim_create_augroup("alpha_temp", { clear = true })
+            --         vim.api.nvim_create_autocmd('DirChanged', {
+            --             pattern = '*',
+            --             group = "alpha_temp",
+            --             callback = function()
+            --                 require('alpha').redraw()
+            --                 vim.cmd('AlphaRemap')
+            --             end,
+            --         })
+            --     end,
+            -- },
         }
 
         require('alpha').setup(config)

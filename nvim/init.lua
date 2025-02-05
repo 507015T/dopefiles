@@ -4,16 +4,8 @@ require("config.lazy")
 require("config.configs")
 -- -- KeyBindings
 require("config.mappings")
--- -- Плагин для автокомплита
--- -- Плагин Git Signs
--- require("plugins.gitsigns")
--- -- Заставка
--- -- Плагин indent-blankline
--- require("ibl").setup()
--- -- Плагины для дебага
--- require("plugins.dap")
--- require("dap-python").setup("python3")
--- require("dapui").setup()
--- -- Syntax Highlighting
--- require("plugins.treesitter")
--- require("plugins.noice")
+
+-- vim.api.nvim_set_hl(0, "CmdLine", { fg = "#ffffff", bg = "#333333" }) -- Цвет текста и фона
+-- vim.api.nvim_set_hl(0, "CmdLinePrompt", { fg = "#ff0000", bold = true }) -- Подсказки в командной строке
+-- vim.api.nvim_set_hl(0, "StatusLine", { fg = "#5eacd3", bg = "#333333" }) -- Строка статуса
+-- vim.api.nvim_set_hl(0, "StatusLineNC", { fg = "#888888", bg = "#111111" }) -- Неактивная строка статуса

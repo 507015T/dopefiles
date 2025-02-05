@@ -25,8 +25,8 @@ return {
                 end
             },
             window = {
-                completion = cmp.config.window.bordered(),
-                documentation = cmp.config.window.bordered()
+                -- completion = cmp.config.window.bordered(),
+                -- documentation = cmp.config.window.bordered()
             },
             mapping = cmp.mapping.preset.insert({
                 ['<C-b>'] = cmp.mapping.scroll_docs(-4),
@@ -75,9 +75,8 @@ return {
 
         -- Set up lspconfig.
         local capabilities = require('cmp_nvim_lsp').default_capabilities()
-        -- require('lspconfig')['pyright'].setup {capabilities = capabilities}
         require('lspconfig')['emmet_language_server'].setup {capabilities = capabilities}
         require('lspconfig')['clangd'].setup {capabilities = capabilities}
-        require('lspconfig')['pyright'].setup {capabilities = capabilities}    
+        require('lspconfig')['pyright'].setup {capabilities = capabilities}
     end,
 }

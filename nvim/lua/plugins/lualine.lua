@@ -90,7 +90,7 @@ return {
           end,
         },
       },
-      extensions = { "nvim-tree", "lazy", "fzf" },
+      extensions = { "neo-tree", "lazy", "fzf" },
     }
   end,
 }

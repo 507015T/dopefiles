@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 
 -- Nvim-Tree
-vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>')
+-- vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>')
 
 -- Navigation
 vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
@@ -11,8 +11,8 @@ vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
 vim.keymap.set('n', '<leader>/', ':CommentToggle<CR>')
 
 -- Splits
-vim.keymap.set('n', '|', ':vsplit<CR>')
-vim.keymap.set('n', '\\', ':split<CR>')
+vim.keymap.set('n', '_', ':vsplit<CR>')
+vim.keymap.set('n', '-', ':split<CR>')
 
 -- Other
 vim.keymap.set('n', '<leader>w', ':w<CR>')
@@ -33,3 +33,6 @@ vim.keymap.set('n', '<Leader>dc', ':DapContinue<CR>')
 vim.keymap.set('n', '<F2>', ':DapStepOver<CR>')
 vim.keymap.set('n', '<F3>', ':DapStepInto<CR>')
 vim.keymap.set('n', '<F4>', ':DapStepOut<CR>')
+
+-- Go to declaration
+vim.api.nvim_set_keymap('n', 'gd', '<C-]>', { noremap = true, silent = true })
