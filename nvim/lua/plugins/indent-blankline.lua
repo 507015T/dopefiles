@@ -11,6 +11,8 @@ return {
            indent = { char = "▏", tab_char = "·" },
             }
         )
+
+    vim.cmd([[highlight clear LineNr]])
     end,
 }
 

@@ -107,6 +107,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
 export PATH="/opt/homebrew/opt/python@3.13/bin:$PATH"
+export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
+export PGDATABASE=postgres
 
 # Set personal aliases, overriding those provided by Oh My Zsh libs,
 # plugins, and themes. Aliases can be placed here, though Oh My Zsh
@@ -121,6 +123,7 @@ export PATH="/opt/homebrew/opt/python@3.13/bin:$PATH"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias n=nvim
 alias ls="eza --tree --level=1 --icons=always --no-time --no-user --no-permissions"
+
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

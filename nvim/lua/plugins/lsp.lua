@@ -54,6 +54,7 @@ return {
         lspconfig.clangd.setup({})
         lspconfig.ts_ls.setup({})
         lspconfig.dockerls.setup({})
+        lspconfig.bashls.setup({})
         require("mason-null-ls").setup({
           ensure_installed = { "black" }
         })
@@ -63,7 +64,10 @@ return {
         null_ls.setup({
           sources = {
             null_ls.builtins.formatting.black,
-            null_ls.builtins.formatting.stylua
+            null_ls.builtins.formatting.stylua,
+            null_ls.builtins.formatting.prettier.with({
+      extra_args = { "--tab-width", "4"}
+    })
           },
         on_attach = function(client, bufnr)
                 -- Привязка кнопки для форматирования
