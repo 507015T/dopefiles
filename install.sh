@@ -39,7 +39,7 @@ function zsh_installing(){
         # source ~/.zshrc
         echo "${bold}ZSH already isntalled!"
     else
-        source ~/.bashrc
+        exec zsh
         brew install zsh
         source ~/.zshrc
     fi
@@ -76,7 +76,7 @@ function powerlevel10k_installing(){
 }
 
 function brew_stuff_installing(){
-    brew install kitty neovim tmux lf yabai skhd fastfetch eza
+    brew install kitty neovim tmux lf yabai skhd fastfetch eza btop
     return
 }
 

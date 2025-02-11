@@ -11,7 +11,9 @@
 - [Yabai](https://github.com/koekeishiya/yabai) & [SKHD](https://github.com/koekeishiya/skhd) config
 - [Fastfetch](https://github.com/fastfetch-cli/fastfetch) config 
 ## Clean Setup (MacOS)
+```bash
 git clone git@github.com:507015T/dopefiles.git ~/.config/ && ~/.config/install.sh
+```
 
 - Install **Brew**
 ```Shell
